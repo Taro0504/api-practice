@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->string('date_of_birth');
-            $table->string('gender');
+            $table->enum('gender', ['男性', '女性', 'その他', '無回答']);
             $table->string('address');
             $table->date('hire_date');
             $table->boolean('is_checked')->default(true);

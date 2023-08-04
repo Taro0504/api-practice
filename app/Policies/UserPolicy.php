@@ -39,7 +39,7 @@ class UserPolicy
      */
     public function update(User $user, User $model): bool
     {
-        return $user->tokenCan('all');
+        return $user->id === $model->id;
     }
 
     /**
@@ -63,6 +63,6 @@ class UserPolicy
      */
     public function forceDelete(User $user, User $model): bool
     {
-        //
+        return $user->tokenCan('all');
     }
 }
