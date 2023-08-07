@@ -39,6 +39,7 @@ class UserPolicy
      */
     public function update(User $user, User $model): bool
     {
+        // 自信のみ更新可能
         return $user->id === $model->id;
     }
 

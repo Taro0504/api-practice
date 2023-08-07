@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('employee_bank_details', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('employee_id')->constrained()->onDelete('cascade');
+            $table->string('bank_name');
+            $table->string('branch_name');
+            $table->string('branch_number');
+            $table->string('account_type');
+            $table->string('account_number');
+            $table->string('account_holder_name');
             $table->timestamps();
         });
     }
