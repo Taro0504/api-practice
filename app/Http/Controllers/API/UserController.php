@@ -6,13 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\User;
-use Illuminate\Database\Eloquent\Collection;
 use App\Http\Resources\UserResource;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+    // ログインしていないとアクセスできないようにする
+    public function __construct()
+    {
+        $this->middleware('auth:sanctum')->except(['login']);
+    }
+
     public function index(): JsonResponse
     {
         $this->authorize('viewAny', User::class);
