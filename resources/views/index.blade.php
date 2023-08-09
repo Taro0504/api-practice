@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Laravel</title>
         @viteReactRefresh
-        @vite(['resources/sass/app.scss', 'resources/ts/Index.tsx'])
+        @vite(['resources/sass/app.scss', 'resources/ts/App.tsx'])
     </head>
     <body>
-        <div id="index"></div>
+        <div id="app"></div>
     </body>
 </html>
