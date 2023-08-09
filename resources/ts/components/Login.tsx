@@ -33,7 +33,7 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-green-100 flex items-center justify-center">
+    <div className="min-h-screen bg-green-100 flex content-center justify-center">
       <form 
         onSubmit={handleSubmit(onSubmit)}
         className="bg-white p-8 rounded-lg shadow-md w-96"
@@ -41,7 +41,7 @@ function Register() {
         <h1 className="bg-gray-300 text-gray-700 p-4 text-center mb-4">
           Functional Lab
         </h1>
-        <div className="mb-4 relative flex flex-col items-center">
+        <div className="mb-4 relative flex flex-col text-center">
           <label className="block text-gray-700 mb-2">Email</label>
           <input 
             {...register('email', { required: true })}
@@ -50,7 +50,7 @@ function Register() {
           />
           {errors.email && <span className="text-red-500 text-sm mt-1">メールアドレスを入力してください</span>}
         </div>
-        <div className="mb-4 relative flex flex-col items-center">
+        <div className="mb-4 relative flex flex-col text-center">
           <label className="block text-gray-700 mb-2">Password</label>
           <input 
             type="password" 
@@ -60,7 +60,7 @@ function Register() {
           />
           {errors.password && <span className="text-red-500 text-sm mt-1">パスワードを入力してください</span>}
         </div>
-        <div className="flex justify-center">
+        <div className="flex text-center">
           <button 
             type="submit"
             className="w-full bg-green-500 text-gray p-2 rounded-md hover:bg-green-600"
